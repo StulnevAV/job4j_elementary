@@ -4,8 +4,8 @@ public class MinDiapason {
     public static int findMin(int[] array, int start, int finish) {
         int min = array[start];
         for (int i = start; i <= finish; i++) {
-            if (array[i] < array[0]) {
-                array[0] = array[i];
+            if (array[i] < array[start]) {
+                array[start] = array[i];
                 min = array[i];
             }
         }
