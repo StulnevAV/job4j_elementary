@@ -8,34 +8,28 @@ class PointTest {
 
     @Test
     void when00to20then2() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 0);
+        a.distance(b);
         double expected = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        assertThat(a.distance(b)).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when13to24then1dot41() {
-        int x1 = 1;
-        int y1 = 3;
-        int x2 = 2;
-        int y2 = 4;
+        Point a = new Point(1, 3);
+        Point b = new Point(2, 4);
+        a.distance(b);
         double expected = 1.41;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        assertThat(a.distance(b)).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void when56to87then3dot16() {
-        int x1 = 5;
-        int y1 = 6;
-        int x2 = 8;
-        int y2 = 7;
+        Point a = new Point(5, 6);
+        Point b = new Point(8, 7);
+        a.distance(b);
         double expected = 3.16;
-        double out = Point.distance(x1, y1, x2, y2);
-        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+        assertThat(a.distance(b)).isEqualTo(expected, withPrecision(0.01));
     }
 }
